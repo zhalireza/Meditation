@@ -1,0 +1,61 @@
+.Meditation_App_Container {
+  display: grid;
+  grid-template-areas:
+    "header header header header header header"
+    "menu main main main right right"
+    "menu footer footer footer footer footer";
+  grid-gap: 10px;
+  padding: 10px;
+  background-image: url("Mediation.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.Meditation_App_Container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1em;
+}
+
+.Meditation_App {
+  grid-area: header;
+  text-align: center;
+  font-family: Harrington, "Cambria Math", serif;
+  font-weight: bold;
+  color: violet;
+}
+.Time_Selection {
+  grid-area: menu;
+  color: darkred;
+}
+
+.Time_Selection button:hover {
+  color: black;
+  background: white;
+}
+
+.Player {
+  grid-area: main;
+  font-family: Calibri, sans-serif;
+}
+.Sound_selection {
+  grid-area: right;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.item5 {
+  grid-area: footer;
+}
+
+button {
+  background-color: lightgoldenrodyellow;
+  font-family: Harrington, fantasy, serif;
+  font-weight: bold;
+  font-size: 150%;
+  transition: all 0.5s ease;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Meditation App </title>
+    <link rel="stylesheet" href="finaproject1.css">
+</head>
+
+<body>
+    <div class="Meditation_App_Container">
+        <div class="Meditation_App">
+            <h1> Mediation App </h1>
+        </div>
+        <div class="Time_Selection">
+            <h3>How long you will like to meditate for: </h3>
+            <br>
+            <p>Enter a custom time</p><input type="number" id="custime" />
+            <br>
+            <br>
+            <button id="custimer" onclick="setCustom()" value="Check Field">Set Time</button>
+        </div>
+
+
+
+
+        <div class="Sound_selection"> Select a sound to meditate to:
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <button id="rain" onclick="swap_rain()"> <img src="rain.jpg" width="112" height="112"></button>
+            <br>
+            <br>
+            <br>
+            <button id="sun" onclick="swap_beach()"> <img src="SUN.png" width="112" height="112"></button>
+        </div>
+
+
+        <div class="Player">
+
+            <video id="myVideo" width="700" height="450" controls>
+                <source src="beach.mp4" type="video/mp4">
+            </video>
+
+            <script>
+                var vid = document.getElementById("myVideo");
+                // var maxTime = 1200;
+                // var customized = 0;
+                // var custime = document.getElementById("custime");
+
+                function setCustom() {
+                    var maxTime = 1200;
+                    var customized = 0;
+                    var custime = document.getElementById("custime").value;
+                    if (custime >= 0 && custime < 20) {
+                        alert("Greater than video length");
+                        break;
+                    }
+                    else {
+                        custime = custime * 60;
+                        customized = maxTime - custime;
+                        vid.currentTime = customized;
+                    }
+                }
+
+                function swap_rain() {
+                    document.getElementById('myVideo').src = 'rain1.mp4';
+
+                }
+
+                function swap_beach() {
+                    document.getElementById('myVideo').src = 'beach.mp4';
+                }
+            </script>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

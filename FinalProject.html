@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Meditation App </title>
+    <link rel="stylesheet" href="finaproject1.css">
+</head>
+
+<body>
+    <div class="Meditation_App_Container">
+        <div class="Meditation_App">
+            <h1> Mediation App </h1>
+        </div>
+        <div class="Time_Selection">
+            <h3>How long you will like to meditate for: </h3>
+            <br>
+            <br>
+            <br>
+            <button onclick="setCurTime2()" type="button">2 Minutes </button>
+            <br>
+            <br>
+            <br>
+            <button onclick="setCurTime5()" type="button">5 Minutes </button>
+            <br>
+            <br>
+            <br>
+            <button onclick="setCurTime10()" type="button">10 Minutes </button>
+            <br>
+            <br>
+            <br>
+            <button onclick="setCurTime20()" type="button">20 Minutes </button>
+
+        </div>
+
+
+
+
+        <div class="Sound_selection"> Select a sound to meditate to:
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <button id="rain" onclick="swap_rain()"> <img src="rain.jpg" width="112" height="112"></button>
+            <br>
+            <br>
+            <br>
+            <button id="sun" onclick="swap_beach()"> <img src="SUN.png" width="112" height="112"></button>
+        </div>
+
+
+        <div class="Player">
+
+            <video id="myVideo" width="700" height="450" controls>
+                <source src="beach.mp4" type="video/mp4">
+            </video>
+
+            <script>
+                var vid = document.getElementById("myVideo");
+                function setCurTime2() {
+                    vid.currentTime = 1080;
+                    vid.play();
+                }
+
+                function setCurTime5() {
+                    vid.currentTime = 900;
+                    vid.play();
+                }
+
+                function setCurTime10() {
+                    vid.currentTime = 600;
+                    vid.play();
+                }
+
+                function setCurTime20() {
+                    vid.currentTime = 0;
+                    vid.play();
+                }
+
+
+                function swap_rain() {
+                    document.getElementById('myVideo').src = 'rain1.mp4';
+
+                }
+
+                function swap_beach() {
+                    document.getElementById('myVideo').src = 'beach.mp4';
+                }
+            </script>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
